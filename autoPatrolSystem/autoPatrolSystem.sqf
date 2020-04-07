@@ -62,8 +62,11 @@
 // start = position player;
 // _startPosition = position player;
 // [5615.35,7043.42,0]
-start = [5615.35,7043.42,0]; // hardcoded start point 
-_startPosition = [5615.35,7043.42,0]; // hardcoded start point 
+// start = [5615.35,7043.42,0]; // hardcoded start point 
+// _startPosition = [5615.35,7043.42,0]; // hardcoded start point 
+
+start = getPos ammo1;
+_startPosition = getPos ammo1;
 // (this can be used to find map centre) _startPosition = [worldSize / 2, worldsize / 2, 0];
 // to do: confirm why both ^^ are needed
 
