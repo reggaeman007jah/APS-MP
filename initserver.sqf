@@ -33,6 +33,7 @@ sleep 0.5;
 //player addAction ["Pick up SF", "autoPatrolSystem\callSF.sqf"];	
 player setVariable ["isBusy", 111]; // i.e. not busy and needs a task
 execVM "autoPatrolSystem\checkSF.sqf";
+execVM "autoPatrolSystem\checkRF.sqf";
 execVM "autoPatrolSystem\motion.sqf";
 sleep 0.5;
 
