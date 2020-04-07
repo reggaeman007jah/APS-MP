@@ -1,0 +1,83 @@
+
+objective.. to create units, 
+marker them, 
+go pick them up, 
+when land, 
+they get in auto, 
+new marker, 
+when land in new marker, 
+they get out auto, 
+then leave group
+they move to location
+
+to do
+create RRR point, that can be either static or obj-driven
+create a directional flow to new objs
+spawn helis at base point
+random place player on land, then trigger all around them
+make heliDrop scripts apply to any heli the player is in (currently named)
+make heliDamageSystem also apply to any heli
+heli damage model is progressive, needs to have some more randomisation, e.g. always 2% engine fire, apply visual damage etc
+change damageEffect4 so engine is always off, even if turned back on
+show damage bar on-screen
+config RF rules to depend on whether player is assigned as heli or infi
+build entry dialog - simply are you heli or infi? setVar on player
+have black screen on start up, with just dialog to ask..
+build timer so blufor move on to next obj regardless
+cycle delete of units not in BZ
+find nearest mount script
+
+use this as instructions and diary
+
+thursday 6th september
+last night, tested changes, all works well except cannot get AI SF team to board heli automatically
+script now creates 1, 2, 3 or 360 attack points around the blufor defenders
+my theory is the the getInCargo etc commands do not work on units in the player group .. test this 
+what does work now is a SF PZ script, although it is land only, and has given some very steep LZs..!
+
+ideas
+logic to push flow a certain direction...
+_patrolDestination = [start, 500, 700] call BIS_fnc_findSafePos; 
+the above generates a land pos between 750m and 1250m away from start pos
+what is needed is a script to test land results in different directions from start pos
+
+so, form start pos, create 8 compass points, all 1km away from start pos.
+mark these as small circles
+now we have 8 expansion points, and can run the landCheck 8 more times.
+If a landCheck = true, then we are interested in keeping this in an array.
+if a landCheck = false, this is a dead end, and we are not interested.
+
+pointChecks:
+
+lvl1_N = start getPos [1000, 0];
+lvl1_NE = start getPos [1000, 45];
+lvl1_E = start getPos [1000, 90];
+lvl1_SE = start getPos [1000, 135];
+lvl1_S = start getPos [1000, 180];
+lvl1_SW = start getPos [1000, 225];
+lvl1_W = start getPos [1000, 270];
+lvl1_NW = start getPos [1000, 315];
+
+
+
+so research arrays again.. create 8 empty arrays to house results from first 1km scan
+
+lvl1_N = [];
+lvl1_NE = [];
+lvl1_E = [];
+lvl1_SE = [];
+lvl1_S = [];
+lvl1_SW = [];
+lvl1_W = [];
+lvl1_NW = [];
+
+
+note.
+we need another visible marker, around the obj, to show two things
+1. minimum drop-off zone for SFRF
+2. anyone within this band to move towards obj on 3 second loop
+3. must not affect units in OBJ zone 
+
+we need a running loop to check blufor units
+when at threshold, create callSF 
+

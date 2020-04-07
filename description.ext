@@ -1,0 +1,121 @@
+
+#include "VAMP_displays\displays.hpp"
+
+//--------------------------------------------------------------
+//------------------------AIS INJURY----------------------------
+//--------------------------------------------------------------
+class CfgFunctions {
+	#include "AIS\cfgFunctions.hpp"
+};
+#include "AIS\Effects\BarDlg.hpp"
+//--------------------------------------------------------------
+
+respawn = 3;
+respawndelay = 3;
+respawnButton = 1;
+// disabledAI = true;
+// respawnOnStart = 1;
+
+enableDebugConsole = 2;
+allowFunctionsLog = 0;
+
+// briefingName = $STR_MISSION_TITLE;
+overviewText = "PHC Training";
+// overviewPicture = "res\lib.paa";
+author = "reggaeman007jah";
+// onLoadName = $STR_MISSION_TITLE;
+// onLoadMission = "www.fireteamsolutions.online";
+// loadScreen = "res\lib.paa";
+
+joinUnassigned = 1;
+
+class Header {
+	gameType =  COOP;	
+	minPlayers =  1;	
+	maxPlayers = 4;
+};
+
+class CfgSounds {
+	sounds[] = {};
+	
+	class info {
+		sound[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hint",0.891251,1};
+		titles[] = {};
+	};
+};
+
+
+
+
+
+
+
+
+
+
+// below is a placeholder for some audio shit...
+
+/*
+class CfgSounds
+{
+	sounds[] = {};
+	
+	class radio
+	{
+		name = "radio";
+		sound[] = {"voiceActivatedArty\sound\radio.ogg", 0.3,1};
+		titles[] = {};
+	};
+
+	class dangerClose1
+	{
+		name = "dangerClose1";
+		sound[] = {"voiceActivatedArty\sound\dangerClose1.ogg", 100,1};
+		titles[] = {};
+	};
+
+	class dangerClose2
+	{
+		name = "dangerClose2";
+		sound[] = {"voiceActivatedArty\sound\dangerClose2.ogg", 100,1};
+		titles[] = {};
+	};
+
+	class dangerClose3
+	{
+		name = "dangerClose3";
+		sound[] = {"voiceActivatedArty\sound\dangerClose3.ogg", 100,1};
+		titles[] = {};
+	};
+
+	class dangerClose4
+	{
+		name = "dangerClose4";
+		sound[] = {"voiceActivatedArty\sound\dangerClose4.ogg", 100,1};
+		titles[] = {};
+	};
+
+	class dangerClose5
+	{
+		name = "dangerClose5";
+		sound[] = {"voiceActivatedArty\sound\dangerClose5.ogg", 100,1};
+		titles[] = {};
+	};
+
+	class dangerClose6
+	{
+		name = "dangerClose6";
+		sound[] = {"voiceActivatedArty\sound\dangerClose6.ogg", 100,1};
+		titles[] = {};
+	};
+
+	class dangerClose7
+	{
+		name = "dangerClose7";
+		sound[] = {"voiceActivatedArty\sound\dangerClose7.ogg", 100,1};
+		titles[] = {};
+	};
+
+
+
+};
