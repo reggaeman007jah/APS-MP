@@ -610,7 +610,7 @@ _patrolObj = {
 		// systemChat "debug --- 360 DEFENCE ..!!!";
 		sleep 30; // pacer wait
 
-		BLUDEFEND = false; // completes defend state
+		BLUEDEFEND = false; // completes defend state
 		INCOMING = true; // starts main onslaught
 	};
 
