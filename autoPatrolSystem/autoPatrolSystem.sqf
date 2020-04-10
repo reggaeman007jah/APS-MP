@@ -582,7 +582,7 @@ _patrolObj = {
 			BLUEDEFEND = true;
 			sleep 30;
 		};
-		sleep 2;
+		sleep 90;
 	};
 
 	// move blufor into defensive position
