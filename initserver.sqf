@@ -46,8 +46,8 @@ sleep 0.5;
 // heli drops
 // player addAction ["Drop Smoke", "heliDrops\dropSmoke.sqf"];	
 // player addAction ["Drop Flare", "heliDrops\dropFlare.sqf"];	
-heli2 addAction ["Drop Smoke", "heliDrops\dropSmoke.sqf"];	
-heli2 addAction ["Drop Flare", "heliDrops\dropFlare.sqf"];	
+heli2 addAction ["Drop Smoke", "autoPatrolSystem\heliDrops\dropSmoke.sqf"];	
+heli2 addAction ["Drop Flare", "autoPatrolSystem\heliDrops\dropFlare.sqf"];	
 
 // Land Check Test Output
 // player addAction ["Test findSafeSpot output", "landCheck\landCheck.sqf"];
